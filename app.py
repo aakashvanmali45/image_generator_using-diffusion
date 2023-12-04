@@ -12,8 +12,8 @@ app = FastAPI()
 # CORS (Cross-Origin Resource Sharing) settings to allow frontend access
 origins = [
     "http://localhost",
-    "http://localhost:8000",  # Add your frontend URL(s) here
-    "https://yourproductiondomain.com",
+    "http://localhost:8000",  # Add your other allowed origins here,
+    "https://image-generation-frontend-dp4i9cdmx-jay-shahs-projects.vercel.app/"
 ]
 
 app.add_middleware(
@@ -22,6 +22,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 class InputData(BaseModel):
