@@ -29,7 +29,7 @@ class InputData(BaseModel):
     num_images: int
 
 class OutputData(BaseModel):
-    image_url: str
+    image_data: str
 
 @app.post("/generate_image", response_model=OutputData)
 async def generate_image(data: InputData):
