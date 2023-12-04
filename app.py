@@ -38,7 +38,7 @@ async def generate_image(data: InputData):
     num_images = data.num_images
 
     # Call the modified process_images function
-    image_data = await process_images(prompt, num_images)
+    image_data = process_images(prompt, num_images)
 
     return OutputData(image_data=image_data)
 
