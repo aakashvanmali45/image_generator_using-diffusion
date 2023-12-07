@@ -15,8 +15,8 @@ pipe = pipe.to("cuda")
 def process_images(prompt, num_images):
     prompts = [prompt] * num_images
 
-    with autocast("cuda"):
-        images = pipe(prompts, guidance_scale=10, num_inference_steps=150).images
+    
+    images = pipe(prompts, guidance_scale=10, num_inference_steps=50).images
 
     # Convert the image to base64
     image_buffer = BytesIO()

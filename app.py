@@ -14,11 +14,12 @@ origins = [
     "http://localhost",
     "http://localhost:8000",  # Add your other allowed origins here,
     "https://image-generation-frontend-dp4i9cdmx-jay-shahs-projects.vercel.app/"
+    "https://tourmaline-phoenix-4900ed.netlify.app/"
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
